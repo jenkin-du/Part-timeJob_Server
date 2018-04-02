@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name></display-name>
+
+	<filter>
+		<filter-name>FileFilter</filter-name>
+		<filter-class>com.webim.search.FileFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+			<!--gbk或者gb2312或者utf-8 -->
+		</init-param>
+		<init-param>
+			<param-name>ignore</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>FileFilter</filter-name>
+		<servlet-name>/*</servlet-name>
+	</filter-mapping>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>CompanyServlet</servlet-name>
+		<servlet-class>com.stitp.action.CompanyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>InfoServlet</servlet-name>
+		<servlet-class>com.stitp.action.InfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CompanyServlet</servlet-name>
+		<url-pattern>/CompanyServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InfoServlet</servlet-name>
+		<url-pattern>/InfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RecruitServlet</servlet-name>
+		<servlet-class>com.stitp.action.RecruitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecruitServlet</servlet-name>
+		<url-pattern>/RecruitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PluralistServlet</servlet-name>
+		<servlet-class>com.stitp.action.PluralistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PluralistServlet</servlet-name>
+		<url-pattern>/PluralistServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.stitp.action.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReleaseServlet</servlet-name>
+		<servlet-class>com.stitp.action.ReleaseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReleaseServlet</servlet-name>
+		<url-pattern>/ReleaseServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetReleaseDefaultServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetReleaseDefaultServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetReleaseDefaultServlet</servlet-name>
+		<url-pattern>/GetReleaseDefaultServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetProvinceServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetProvinceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetProvinceServlet</servlet-name>
+		<url-pattern>/GetProvinceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>GetCityServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetCityServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCityServlet</servlet-name>
+		<url-pattern>/GetCityServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetZoneServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetZoneServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetZoneServlet</servlet-name>
+		<url-pattern>/GetZoneServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetPersonInfoServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetPersonInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetPersonInfoServlet</servlet-name>
+		<url-pattern>/GetPersonInfoServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangePasswordServlet</servlet-name>
+		<servlet-class>com.stitp.action.ChangePasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangePasswordServlet</servlet-name>
+		<url-pattern>/ChangePasswordServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangeDescriptionServlet</servlet-name>
+		<servlet-class>com.stitp.action.ChangeDescriptionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangeDescriptionServlet</servlet-name>
+		<url-pattern>/ChangeDescriptionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetParttimejobServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetParttimejobServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetParttimejobServlet</servlet-name>
+		<url-pattern>/GetParttimejobServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetPinformationServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetPinformationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetPinformationServlet</servlet-name>
+		<url-pattern>/GetPinformationServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetPluralistInfoServlet</servlet-name>
+		<servlet-class>com.stitp.action.GetPluralistInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetPluralistInfoServlet</servlet-name>
+		<url-pattern>/GetPluralistInfoServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmployServlet</servlet-name>
+		<servlet-class>com.stitp.action.EmployServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployServlet</servlet-name>
+		<url-pattern>/EmployServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UnEmployServlet</servlet-name>
+		<servlet-class>com.stitp.action.UnEmployServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UnEmployServlet</servlet-name>
+		<url-pattern>/UnEmployServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CancelEmployServlet</servlet-name>
+		<servlet-class>com.stitp.action.CancelEmployServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelEmployServlet</servlet-name>
+		<url-pattern>/CancelEmployServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RecruitStatusServlet</servlet-name>
+		<servlet-class>com.stitp.action.RecruitStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RecruitStatusServlet</servlet-name>
+		<url-pattern>/RecruitStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckCompanyServlet</servlet-name>
+		<servlet-class>com.stitp.action.CheckCompanyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckCompanyServlet</servlet-name>
+		<url-pattern>/CheckCompanyServlet</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>com.stitp.action.ContextListener</listener-class>
+	</listener>
+</web-app>
